@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The SignUp & SignIn Form</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.layout{
+    width: 500px;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    font-size: 30px;
+    color: lightcoral;
+    border-bottom: 1px solid violet;
+}
+
+#left-side{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+#right-side{
+    background-image: linear-gradient(180deg, rgb(255, 58, 58), rgb(255, 25, 240));
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+input{
+    display: flex;
+    height: 40px;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    outline: 0;
+}
+
+h1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    background-color: rgb(135, 145, 250);
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.phone{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin-left: 9px;
+}
+
+#p-left{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    position: absolute;
+    outline: 0;
+
+}
+
+#p-right{
+    width: 300px;
+    position: absolute;
+    right: 4.5%;
+    padding: 10px;
+    margin: 0px 0px 0px 5px;
+}
+
+.btn{
+    border: 3px solid rgb(255, 97, 97);
+    width: 400px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(255, 149, 0);
+    outline: none;
+    margin-top: 20px;
+    /* text-shadow: 2px 2px #ffffff; */
+
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(0, 255, 242);
+}
+
+.extra{
+    display: flex;
+    height: 20px;
+    width: 412px;
+    font-size: 20px;
+}
+
+.check-box{
+    width: 200px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.check-box input{
+    width: 18px;
+}
+
+.link{
+    width: 200px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="layout" id="left-side">
+                <h1><marquee behavior="left" direction="left">Welcome to our website</marquee></h1> <br>
+            <form action="#" method="post">
+                <h2>Sign Up Form</h2>
+                <input type="text" name="firstname" id="fname" placeholder="First Name" required>
+                <input type="text" name="lastname" id="lname" placeholder="Last Name" required>
+                <input class="inputs" type="email" name="E-mail" id="e-mail" placeholder="E-mail" required>
+                <input type="email" name="E-mail" id="conemail" placeholder="Confirmed E-mail" required>
+                <div class="phone">
+                    <select name="code" id="p-left">
+                        <option value="#">- Select-</option>
+                        <option value="+880">+880</option>
+                        <option value="+44">+990</option>
+                        <option value="+550">+550</option>
+                        <option value="+660">+660</option>
+                        <option value="+440">+440</option>
+                        <option value="+752">+752</option>
+                    </select>
+                    <input id="p-right" type="tel" name="Phone_Number" id="mobile" placeholder="Phone Number" pattern="[0-9]{10}">
+                </div>
+                <input type="password" name="password" id="pwd" placeholder="Password" required>
+                <input type="password" name="password" id="pwd" placeholder="Confirmed Password" required>
+                <div class="extra">
+                    <div class="check-box">
+                        <input class="check-box1" type="checkbox" name="text" id="text1">
+                        <label for="text1">Remember Me</label>
+                    </div>
+                    <div class="link">
+                        <a href="#" target="_blank" rel="noopener noreferrer">Forgot Password</a>
+                    </div>
+                </div>
+                <a href="https://www.google.com/">
+                <input class="btn" type="button" value="Sign Up" > </a>
+            </form>
+        </div>
+        <div class="layout" id="right-side">
+            <h2>left Side</h2>
+            <h2>Right Side</h2>
+        </div>
+    </div>
+</body>
+</html>
